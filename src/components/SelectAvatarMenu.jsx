@@ -11,6 +11,12 @@ export const SelectAvatarMenu = ({ avatar, setAvatar }) => {
     getAvatar()
   }, [])
 
+  const handleClikeOk = () => {
+    if (selectedImageIndex != -1) {
+      setAvatar(images[selectedImageIndex])
+    }
+  }
+
   return (
     <div className="w-100 h-100 d-flex justify-content-center align-items-center">
       <div className="border border-primary-subtle rounded shadow bg-white w-75 h-75 text-start">
@@ -23,7 +29,7 @@ export const SelectAvatarMenu = ({ avatar, setAvatar }) => {
           ))}
         </div>
         <div className="text-center">
-          <div className="btn btn-outline-primary">OK</div>
+          <div className="btn btn-outline-primary" onClick={handleClikeOk}>OK</div>
         </div>
       </div>
     </div>

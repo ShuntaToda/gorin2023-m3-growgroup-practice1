@@ -4,7 +4,7 @@ import './bootstrap.min.css';
 import { Field } from './components/Field';
 
 function App() {
-  const [avatar, setAvatar] = useState({});
+  const [avatar, setAvatar] = useState("");
 
   return (
     <div className="App">
