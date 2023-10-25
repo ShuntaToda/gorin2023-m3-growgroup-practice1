@@ -12,7 +12,7 @@ export const SelectAvatarMenu = ({ avatar, setAvatar }) => {
   }, [])
 
   const handleClikeOk = () => {
-    if (selectedImageIndex != -1) {
+    if (selectedImageIndex !== -1) {
       setAvatar(images[selectedImageIndex])
     }
   }
@@ -23,7 +23,7 @@ export const SelectAvatarMenu = ({ avatar, setAvatar }) => {
         <h2 className="my-3 ms-4">Select Avatar</h2>
         <div className="d-flex pt-4 justify-content-around">
           {images.map((image, index) => (
-            <div key={index} onClick={() => setSelectedImageIndex(index)} className={`${selectedImageIndex == index ? "border-danger" : "border-white"} border py-3 px-4 rounded`}>
+            <div key={index} onClick={() => setSelectedImageIndex(index)} className={`${selectedImageIndex === index ? "border-danger" : "border-white"} border py-3 px-4 rounded`}>
               <img src={image} alt="" />
             </div>
           ))}
