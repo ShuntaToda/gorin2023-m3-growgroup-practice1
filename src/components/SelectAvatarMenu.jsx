@@ -18,8 +18,8 @@ export const SelectAvatarMenu = ({ avatar, setAvatar }) => {
   }
 
   return (
-    <div className="w-100 h-100 d-flex justify-content-center align-items-center">
-      <div className="border border-primary-subtle rounded shadow bg-white w-75 h-75 text-start">
+    <div className="w-100 h-100 mt-5 d-flex justify-content-center align-items-center">
+      <div className="border border-primary-subtle rounded shadow bg-white py-3 px-3 w-75 h-75 text-start">
         <h2 className="my-3 ms-4">Select Avatar</h2>
         <div className="d-flex pt-4 justify-content-around">
           {images.map((image, index) => (
