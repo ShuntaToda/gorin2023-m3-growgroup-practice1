@@ -2,9 +2,11 @@ import { useEffect, useState } from "react"
 import { SelectAvatarMenu } from "./SelectAvatarMenu"
 import { getItemsAPI } from "../api/items"
 import { Item } from "./Item"
+import { Avatar } from "./Avatar"
 
 export const Field = ({ avatar, setAvatar }) => {
   const [items, setItems] = useState([])
+  const [playerPosition, setPlayerPosition] = useState({ x: 0, y: 0 })
   useEffect(() => {
     const getItems = async () => {
       const data = await getItemsAPI();
@@ -20,6 +22,7 @@ export const Field = ({ avatar, setAvatar }) => {
       <div className={"position-relative border border-4 rounded-3 mt-5"} style={{ height: "700px", width: "1000px" }}>
         {items.map((item, index) => <Item item={item} index={index}></Item>
         )}
+        <Avatar avatar={avatar} playerPosition={playerPosition}></Avatar>
       </div>
     </div>
   )

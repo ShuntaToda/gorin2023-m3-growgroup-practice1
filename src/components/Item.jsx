@@ -5,8 +5,8 @@ export const Item = ({ item, index }) => {
   const [left, setLeft] = useState(0)
   useEffect(() => {
     if (index === 0) {
-      setTop(100)
-      setLeft(100)
+      setTop(500)
+      setLeft(700)
     } else if (index === 1) {
       setTop(100)
       setLeft(700)
